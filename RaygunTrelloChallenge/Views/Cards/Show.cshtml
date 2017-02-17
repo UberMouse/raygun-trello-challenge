@@ -1,0 +1,16 @@
+﻿@model Manatee.Trello.Card
+
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.Name</h1>
+
+@foreach (var comment in @Model.Comments)
+{
+    <div class="Comment">
+        <p>@comment.Data.Text <span>@comment.Creator.FullName</span></p>
+    </div>
+}
+

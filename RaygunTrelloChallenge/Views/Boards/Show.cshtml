@@ -15,7 +15,7 @@
         @foreach (var card in list.Cards)
         {
             <div class="Card">
-                <p>@card.Name</p>
+                <a href="@Url.Action("Show", "Cards")/@card.Id">@card.Name</a>
             </div>
         }
     </div>
