@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Manatee.Trello;
 using Manatee.Trello.ManateeJson;
+using RaygunTrelloChallenge.ViewModels;
 
 namespace RaygunTrelloChallenge.Controllers
 {
@@ -13,7 +14,9 @@ namespace RaygunTrelloChallenge.Controllers
         // GET: Boards
         public ActionResult Index()
         {
-            return View();
+            var boards = Member.Me.Boards.ToArray();
+
+            return View(boards);
         }
 
         // GET: Boards/:id
