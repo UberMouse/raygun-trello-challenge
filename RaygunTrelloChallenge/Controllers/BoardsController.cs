@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Manatee.Trello;
+using Manatee.Trello.ManateeJson;
 
 namespace RaygunTrelloChallenge.Controllers
 {

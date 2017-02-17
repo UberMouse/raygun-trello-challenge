@@ -13,7 +13,7 @@ namespace RaygunTrelloChallenge.Controllers
         // GET: Index
         public ActionResult Index()
         {
-            var token = Request.Cookies["TrelloToken"]?.Value;
+            var token = Session["TrelloToken"] as string;
             if (!string.IsNullOrWhiteSpace(token))
             {
                 return new RedirectToRouteResult(

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -20,12 +21,8 @@ namespace RaygunTrelloChallenge.Controllers
 
         public ActionResult Token()
         {
-            var authorizationCookie = new HttpCookie("TrelloToken")
-            {
-                Value = Request.Form.Get("token"),
-                Expires = DateTime.Now.AddDays(7)
-            };
-            Response.Cookies.Add(authorizationCookie);
+            var token = Request.Form.Get("token");
+            Session["TrelloToken"] = Request.Form.Get("token");
 
             return new HttpStatusCodeResult(HttpStatusCode.NoContent);
         }

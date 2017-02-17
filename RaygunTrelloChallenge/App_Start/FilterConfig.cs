@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using RaygunTrelloChallenge.Filters;
 
 namespace RaygunTrelloChallenge
 {
@@ -8,6 +9,7 @@ namespace RaygunTrelloChallenge
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new SetupTrelloFilter());
         }
     }
 }
