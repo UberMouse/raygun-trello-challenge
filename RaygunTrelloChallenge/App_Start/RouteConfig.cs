@@ -14,9 +14,15 @@ namespace RaygunTrelloChallenge
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
+                name: "Index",
+                url: "",
+                defaults: new { controller = "Index", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Controllers",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { id = UrlParameter.Optional }
             );
         }
     }
