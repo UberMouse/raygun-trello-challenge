@@ -5,18 +5,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@Model.Name</h1>
-
-@foreach (var comment in @Model.Comments)
-{
-    <div class="Comment">
-        <p>@comment.Data.Text <span>@comment.Creator.FullName</span></p>
-    </div>
-}
-
-
-<form action="@Url.Action("Comment")/@Model.Id" method="post">
-    <textarea name="Comment"></textarea>
+<div class="row">
+    <h1>@Model.Name</h1>
     
-    <button type="submit">Submit</button>
-</form>
+    <h3>Comments</h3>
+    @foreach (var comment in @Model.Comments)
+    {
+        <div class="Comment">
+            <p>@comment.Data.Text</p>
+            <span>@comment.Creator.FullName - @comment.CreationDate.ToShortDateString()</span>
+        </div>
+    }
+</div>
+
+<div class="row">
+    <h3>Add a new comment</h3>
+    <form action="@Url.Action("Comment")/@Model.Id" method="post">
+        <textarea name="Comment" rows="5" cols="80"></textarea>
+
+        <br/>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+</div>

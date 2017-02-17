@@ -7,16 +7,18 @@
 
 <h2>@Model.Name</h2>
 
-@foreach (var list in @Model.Lists)
-{
-    <div class="List">
-        <p>@list.Name</p>
-        
-        @foreach (var card in list.Cards)
-        {
-            <div class="Card">
-                <a href="@Url.Action("Show", "Cards")/@card.Id">@card.Name</a>
-            </div>
-        }
-    </div>
-}
+<div class="Board">
+    @foreach (var list in @Model.Lists)
+    {
+        <div class="Board--list">
+            <p>@list.Name</p>
+
+            @foreach (var card in list.Cards)
+            {
+                <div class="Board--card">
+                    <a href="@Url.Action("Show", "Cards")/@card.Id">@card.Name</a>
+                </div>
+            }
+        </div>
+    }
+</div>

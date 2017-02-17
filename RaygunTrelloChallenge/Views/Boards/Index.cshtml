@@ -4,10 +4,11 @@
     ViewBag.Title = "title";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-@foreach (var board in Model)
-{
-    <div class="Board">
-        <a href="@Url.Action("Show")/@board.Id">@board.Name</a>   
-    </div>    
-}
+<div class="row">
+    @foreach (var board in Model)
+    {
+        <a class="BoardCard col-md-2" href="@Url.Action("Show")/@board.Id">
+            <span class="BoardCard--name">@board.Name</span>
+        </a>
+    }
+</div>

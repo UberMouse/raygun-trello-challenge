@@ -1,24 +1,53 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.body {
+    background-color: #eee;
 }
 
-/* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 5rem;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.Login {
+    text-align: center;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.BoardCard {
+    height: 10rem;
+    width: 30rem;
+    background-color: #0079bf;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.BoardCard--name {
+    margin-top: 3rem;
+    color: #EEE;
+}
+
+.Board {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: left;
+    overflow: auto;
+}
+
+.Board--list {
+    flex-direction: column;
+    width: 20rem;
+    padding: 1rem;
+    background-color: #E2E4E6;
+    margin-right: 3rem;
+}
+
+.Board--card {
+    margin-bottom: .5rem;
+    background-color: #EEE;
+    padding: .3rem;
+}
+.Board--card a {
+    color: #4d4d4d;
+}
+
+.Comment {
+    margin-bottom: 1rem;
 }
