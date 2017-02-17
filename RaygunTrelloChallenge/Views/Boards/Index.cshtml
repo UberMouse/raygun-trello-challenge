@@ -8,6 +8,6 @@
 @foreach (var board in Model)
 {
     <div class="Board">
-        <p>@board.Name</p>   
+        <a href="@Url.Action("Show")/@board.Id">@board.Name</a>   
     </div>    
 }

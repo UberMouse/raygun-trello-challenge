@@ -1,8 +1,22 @@
-﻿@model dynamic
+﻿@model Manatee.Trello.Board
 
 @{
     ViewBag.Title = "show";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>show</h2>
+<h2>@Model.Name</h2>
+
+@foreach (var list in @Model.Lists)
+{
+    <div class="List">
+        <p>@list.Name</p>
+        
+        @foreach (var card in list.Cards)
+        {
+            <div class="Card">
+                <p>@card.Name</p>
+            </div>
+        }
+    </div>
+}

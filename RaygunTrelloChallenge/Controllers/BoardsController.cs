@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using Manatee.Trello;
-using Manatee.Trello.ManateeJson;
-using RaygunTrelloChallenge.ViewModels;
 
 namespace RaygunTrelloChallenge.Controllers
 {
@@ -20,9 +15,11 @@ namespace RaygunTrelloChallenge.Controllers
         }
 
         // GET: Boards/:id
-        public ActionResult Show()
+        public ActionResult Show(string id)
         {
-            return View();
+            var board = new Board(id);
+
+            return View(board);
         }
     }
 }
