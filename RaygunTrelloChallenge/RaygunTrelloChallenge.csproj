@@ -148,6 +148,7 @@
     <Compile Include="Controllers\BoardsController.cs" />
     <Compile Include="Controllers\CardsController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Filters\AuthenticatedFilter.cs" />
     <Compile Include="Filters\SetupTrelloFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

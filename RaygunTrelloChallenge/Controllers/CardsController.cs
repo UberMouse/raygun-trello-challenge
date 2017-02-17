@@ -5,9 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Manatee.Trello;
+using RaygunTrelloChallenge.Filters;
 
 namespace RaygunTrelloChallenge.Controllers
 {
+    [AuthenticatedFilter]
     public class CardsController : Controller
     {
         // GET: Boards/:id/Cards/:id

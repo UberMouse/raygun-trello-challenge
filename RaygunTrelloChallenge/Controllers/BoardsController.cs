@@ -1,9 +1,11 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using Manatee.Trello;
+using RaygunTrelloChallenge.Filters;
 
 namespace RaygunTrelloChallenge.Controllers
 {
+    [AuthenticatedFilter]
     public class BoardsController : Controller
     {
         // GET: Boards
