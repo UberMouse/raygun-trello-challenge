@@ -14,3 +14,9 @@
     </div>
 }
 
+
+<form action="@Url.Action("Comment")/@Model.Id" method="post">
+    <textarea name="Comment"></textarea>
+    
+    <button type="submit">Submit</button>
+</form>

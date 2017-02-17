@@ -31,6 +31,7 @@ namespace RaygunTrelloChallenge.Controllers
             parameters["expiration"] = "never";
             parameters["name"] = "Raygun Trello Challenge";
             parameters["key"] = ConfigurationManager.AppSettings["TrelloAppKey"];
+            parameters["scope"] = "read,write";
             parameters["callback_method"] = "fragment";
             parameters["redirect_uri"] = Request.Url + "Authorization/Index";
             uriBuilder.Query = parameters.ToString();
