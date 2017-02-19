@@ -194,6 +194,7 @@
     <Content Include="Views\Boards\Show.cshtml" />
     <Content Include="Views\Authorization\Index.cshtml" />
     <Content Include="Views\Cards\Show.cshtml" />
+    <Content Include="Views\Shared\PageNotFoundView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,6 +10,7 @@ using RaygunTrelloChallenge.Filters;
 namespace RaygunTrelloChallenge.Controllers
 {
     [AuthenticatedFilter]
+    [HandleError(View = "PageNotFoundView")]
     public class CardsController : Controller
     {
         // GET: Boards/:id/Cards/:id
@@ -25,6 +26,7 @@ namespace RaygunTrelloChallenge.Controllers
         {
             var card = new Card(id);
 
+            // Needs to be validated
             card.Comments.Add(Request.Form["Comment"]);
 
             return RedirectToAction("Show", "Cards", new { id });

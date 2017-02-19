@@ -17,6 +17,8 @@ namespace RaygunTrelloChallenge.Controllers
         }
 
         // GET: Boards/:id
+        // Can't get it working, unsure why
+        [HandleError(View = "PageNotFoundView")]
         public ActionResult Show(string id)
         {
             var board = new Board(id);
